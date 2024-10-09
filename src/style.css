@@ -6,6 +6,14 @@ body {
   margin: 0 auto;
   max-width: 1400px;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../images/Brandon_main.jpg);
@@ -54,8 +62,41 @@ header a {
   );
   border-radius: 4px;
 }
+footer {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+footer h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+footer p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 30px;
+  line-height: 32px;
+  opacity: 0.7;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer a {
+  color: white;
+  opacity: 0.7;
+  line-height: 32px;
+}
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -67,5 +108,12 @@ header a {
   }
   header h3 {
     font-size: 12px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  section {
+    padding: 30px;
   }
 }
